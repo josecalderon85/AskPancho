@@ -35,7 +35,7 @@ export default class Assistant {
     return this.say(this.config.reply);
   }
   say(sentence) {
-    const filtered = sentence.replace(/[&\\#,+()$~%.'"*?<>{}]/g, '');
+    const filtered = sentence.replace(/[&\/\\#,+()$~%.'"*?<>{}]/g, '');
     const msg = new SpeechSynthesisUtterance(filtered);
     window.speechSynthesis.speak(msg);
   }
