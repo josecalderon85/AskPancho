@@ -36,8 +36,8 @@
     "sass-loader": "^6.0.7",
     "style-loader": "^0.20.3",
     "svg-react-loader": "^0.4.5",
-    "webpack": "^4.17.2",
-    "webpack-cli": "^2.1.5",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.1",
     "webpack-dev-server": "^3.1.7"
   },
   "eslintConfig": {

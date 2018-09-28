@@ -27,11 +27,19 @@ module.exports = {
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader']
-      }
+      },
+      {
+            test: /\.svg$/,
+            exclude: /node_modules/,
+            loader: require.resolve('svg-react-loader'),
+            options: {
+              xmlnsTest: /^xmlns.*$/
+            }
+      },
     ],
   },
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx', '.svg']
   },
 
   devServer: {
