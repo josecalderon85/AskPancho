@@ -1,10 +1,8 @@
 {
-  "name": "react-boilerplate",
+  "name": "AskPancho",
   "version": "1.0.0",
-  "description": "Modern React boilerplate",
+  "description": "AskPancho",
   "main": "index.js",
-  "repository": "https://github.com/BrunoTorresF/react-boilerplate",
-  "author": "Bruno Torres",
   "license": "MIT",
   "scripts": {
     "dev": "webpack --config webpack.config.js --watch --mode development",
@@ -18,13 +16,15 @@
     "express": "^4.16.3",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
-    "react-router-dom": "^4.3.1"
+    "react-router-dom": "^4.3.1",
+    "detect-browser": "^2.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.2",
+    "babel-plugin-react-svg": "^2.1.0",
     "css-loader": "^0.28.11",
     "eslint": "^4.19.1",
     "eslint-loader": "^2.1.0",
@@ -32,10 +32,15 @@
     "node-sass": "^4.9.2",
     "postcss-loader": "^2.1.6",
     "react-hot-loader": "^4.3.6",
+    "react-svg-loader": "^2.1.0",
     "sass-loader": "^6.0.7",
     "style-loader": "^0.20.3",
-    "webpack": "^4.17.2",
-    "webpack-cli": "^2.1.5",
+    "svg-react-loader": "^0.4.5",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.1",
     "webpack-dev-server": "^3.1.7"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/preact-scripts/config/eslint.js"
   }
 }

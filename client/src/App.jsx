@@ -1,13 +1,33 @@
 import React, { Component } from 'react';
 //RHL only for front end development
-import { hot } from 'react-hot-loader';
+import { detect } from 'detect-browser';
+import Logo from './logo.svg';
+
+const browser = detect();
 
 class App extends Component {
   render() {
-    return <div>Welcome to a Modern Minimal React Boilerplate</div>;
+
+    return (
+      <div className="App">
+        <div className="Content">
+          <Logo className="App-logo" alt="logo" />
+          <h2>
+            { (!browser || browser.name !== 'chrome')
+              ? 'Uh - Oh'
+              : ''
+            }
+          </h2>
+          <p className="Subtitle">
+            { (!browser || browser.name !== 'chrome')
+              ? 'You need Chrome to use this website!'
+              : ''
+            }
+          </p>
+        </div>
+      </div>
+    );
   }
 }
-//hot export works with RHL. Remove line 11 when starting fullstack integration
-export default hot(module)(App);
-//Uncomment line 13 & delete line 11 when starting fullstack integration
-// export default App;
+
+export default App;
