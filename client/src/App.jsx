@@ -2,8 +2,24 @@ import React, { Component } from 'react';
 //RHL only for front end development
 import { detect } from 'detect-browser';
 import Logo from './logo.svg';
+// import Navigation from './components/Navigation.js';
+// import { BrowserRouter, Route, Switch } from 'react-router-dom';
+// import Calendar from './components/calendar.jsx';
+import Assistant from './assistant';
 
 const browser = detect();
+
+if (browser && browser.name === 'chrome') {
+  const assistant = new Assistant({
+    skills: [
+      require('./skills/time'),
+      require('./skills/schedule'),
+    ],
+  });
+  assistant.start();
+}
+
+
 
 class App extends Component {
   render() {

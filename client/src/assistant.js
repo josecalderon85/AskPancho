@@ -1,6 +1,6 @@
 const defaults = {
   skills: [],
-  name: 'Pancho',
+  name: 'Joe',
   language: 'en-US',
   reply: "Sorry, I don't know that one.",
 };
@@ -35,7 +35,7 @@ export default class Assistant {
     return this.say(this.config.reply);
   }
   say(sentence) {
-    const filtered = sentence.replace(/[&\/\\#,+()$~%.'"*?<>{}]/g, '');
+    const filtered = sentence.replace(/[&\\#,+()$~%.'"*?<>{}]/g, '');
     const msg = new SpeechSynthesisUtterance(filtered);
     window.speechSynthesis.speak(msg);
   }
